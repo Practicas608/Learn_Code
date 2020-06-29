@@ -1,0 +1,186 @@
+/* Menu_Navegacion */
+
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #F2F2F2;
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+.logo {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;    
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;    
+}
+
+#sidebar .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid #000;    
+}
+
+
+/* Proyectos_Hover */
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: white;
+    font-family: 'status-bar';
+}
+
+.contenedor{
+    width: 90%;
+    max-width:900px;
+    margin: auto;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tabla{
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    border:1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px  #95F5C5;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1;
+    color: #00375D;
+}
+
+.tabla>h2{
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.tabla img{
+    width: 120px;
+    margin-bottom:35px;
+}
+
+.tabla > h3{
+    font-size:30px;
+    margin-bottom: 20px;
+}
+
+.tabla > p{
+    display: block;
+    margin-bottom:20px;
+}
+
+.boton{
+    display:inline-block;
+    width: 150px;
+    padding:12px;
+    background: black;
+    text-decoration: none;
+    color: white;                    
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.tabla:hover{
+    background: #F5F5F5;
+    color: black;
+    transition: .5s all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .tabla{
+        width: 45%;
+        max-width:none;
+        margin-bottom: 40px;
+        flex-grow: initial;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .tabla{
+        width: 45%;
+        padding:30px;
+    }
+    .tabla > h2{
+        margin-top:40px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .tabla{
+        width: 85%;
+        padding: 20px;
+    }
+}
+
+/* Ventana_Aviso */
+
+#box{
+    width: 400px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 9999;
+    padding: 50px;
+    text-align: center;
+    display: none;
+    font-size: 10px;
+}
+
+#box h1{
+    color: white;
+}
+
+#box h2{
+    color: white;
+}
+
+.close{
+    font-size: 15px;
+    color: black;
+    padding: 5px 15px;
+    cursor: pointer;
+    background: white;
+    display: inline-block;
+    border-radius: 20px;
+}
